@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ratings",
+  "info": {
+    "name": "Ratings"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "transaltion": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

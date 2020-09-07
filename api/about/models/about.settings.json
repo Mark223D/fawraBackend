@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abouts",
+  "info": {
+    "name": "About"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "English": {
+      "type": "richtext"
+    },
+    "Arabic": {
+      "type": "richtext"
+    }
+  }
+}

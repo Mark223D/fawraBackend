@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "social_media_links",
+  "info": {
+    "name": "SocialMediaLink"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "text": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}
