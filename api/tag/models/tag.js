@@ -5,7 +5,6 @@
  * to customize this model
  */
 const slugify = require('slugify');
-const category = require('../../category/services/category');
 module.exports = {
     lifecycles: {
         async beforeCreate(data) {
