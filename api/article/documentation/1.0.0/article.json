@@ -665,6 +665,9 @@
               "title": {
                 "type": "string"
               },
+              "translation": {
+                "type": "string"
+              },
               "created_by": {
                 "type": "string"
               },

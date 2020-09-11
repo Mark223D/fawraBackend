@@ -11,6 +11,9 @@
   "attributes": {
     "title": {
       "type": "string"
+    },
+    "translation": {
+      "type": "string"
     }
   }
 }
