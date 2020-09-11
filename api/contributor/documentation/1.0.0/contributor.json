@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/articles": {
+    "/contributors": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Article"
+                    "$ref": "#/components/schemas/Contributor"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Contributor"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Contributor"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Contributor"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewContributor"
               }
             }
           }
         }
       }
     },
-    "/articles/count": {
+    "/contributors/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Contributor"
         ],
         "parameters": []
       }
     },
-    "/articles/{id}": {
+    "/contributors/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Contributor"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Contributor"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Article"
+                  "$ref": "#/components/schemas/Contributor"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Contributor"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle"
+                "$ref": "#/components/schemas/NewContributor"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Article"
+          "Contributor"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Article": {
+      "Contributor": {
         "required": [
           "id"
         ],
@@ -522,164 +522,16 @@
           "id": {
             "type": "string"
           },
-          "title": {
+          "Name": {
             "type": "string"
           },
-          "author": {
+          "Company": {
             "type": "string"
           },
-          "published_at": {
+          "website": {
             "type": "string"
           },
-          "images": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "slug": {
-            "type": "string"
-          },
-          "categories": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "translation": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "ratings": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "transaltion": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "tags": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "translation": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "content": {
+          "email": {
             "type": "string"
           },
           "created_by": {
@@ -772,30 +624,18 @@
           }
         }
       },
-      "NewArticle": {
+      "NewContributor": {
         "properties": {
-          "title": {
+          "Name": {
             "type": "string"
           },
-          "author": {
+          "Company": {
             "type": "string"
           },
-          "published_at": {
+          "website": {
             "type": "string"
           },
-          "slug": {
-            "type": "string"
-          },
-          "categories": {
-            "type": "string"
-          },
-          "ratings": {
-            "type": "string"
-          },
-          "tags": {
-            "type": "string"
-          },
-          "content": {
+          "email": {
             "type": "string"
           },
           "created_by": {
@@ -810,7 +650,7 @@
   },
   "tags": [
     {
-      "name": "Article"
+      "name": "Contributor"
     }
   ]
 }

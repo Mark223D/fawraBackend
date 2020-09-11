@@ -1,22 +1,25 @@
 {
   "kind": "collectionType",
-  "collectionName": "tags",
+  "collectionName": "contributors",
   "info": {
-    "name": "Tag"
+    "name": "Contributor"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "title": {
+    "Name": {
       "type": "string"
     },
-    "translation": {
+    "Company": {
       "type": "string"
     },
-    "slug": {
+    "website": {
       "type": "string"
+    },
+    "email": {
+      "type": "email"
     }
   }
 }
