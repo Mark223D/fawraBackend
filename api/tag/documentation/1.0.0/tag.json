@@ -525,11 +525,8 @@
           "title": {
             "type": "string"
           },
-          "translation": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -626,11 +623,8 @@
           "title": {
             "type": "string"
           },
-          "translation": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"

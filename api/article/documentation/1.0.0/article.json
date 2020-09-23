@@ -621,6 +621,9 @@
               "slug": {
                 "type": "string"
               },
+              "publish": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -646,6 +649,9 @@
               "slug": {
                 "type": "string"
               },
+              "publish": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -665,11 +671,8 @@
               "title": {
                 "type": "string"
               },
-              "translation": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
+              "publish": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -680,6 +683,18 @@
             }
           },
           "content": {
+            "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
+          },
+          "arabic_title": {
+            "type": "string"
+          },
+          "arabic_content": {
+            "type": "string"
+          },
+          "arabic_author": {
             "type": "string"
           },
           "created_by": {
@@ -796,6 +811,18 @@
             "type": "string"
           },
           "content": {
+            "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
+          },
+          "arabic_title": {
+            "type": "string"
+          },
+          "arabic_content": {
+            "type": "string"
+          },
+          "arabic_author": {
             "type": "string"
           },
           "created_by": {

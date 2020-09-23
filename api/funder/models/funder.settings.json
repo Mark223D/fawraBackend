@@ -1,25 +1,25 @@
 {
   "kind": "collectionType",
-  "collectionName": "contributors",
+  "collectionName": "funders",
   "info": {
-    "name": "Contributor"
+    "name": "Funder"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Company": {
+    "arabic": {
       "type": "string"
     },
-    "website": {
+    "link": {
       "type": "string"
     },
-    "email": {
-      "type": "email"
+    "publish": {
+      "type": "boolean"
     }
   }
 }

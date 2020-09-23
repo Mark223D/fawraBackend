@@ -11,9 +11,12 @@ module.exports = {
         async beforeCreate(data) {
             console.log("BeforeCreate", data);
 
+            let category = await strapi.query('category').find({ slug: 'all-articles' });
+            let rating = await strapi.query('ratings').find({ slug: 'most-recent' });
 
             data.slug = slugify(data.title, { lower: true });
-
+            data.categories = [category[0]];
+            data.ratings = [rating[0]];
 
         },
         async beforeUpdate(params, data) {

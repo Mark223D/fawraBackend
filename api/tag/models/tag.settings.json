@@ -12,11 +12,8 @@
     "title": {
       "type": "string"
     },
-    "translation": {
-      "type": "string"
-    },
-    "slug": {
-      "type": "string"
+    "publish": {
+      "type": "boolean"
     }
   }
 }

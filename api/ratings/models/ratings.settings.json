@@ -17,6 +17,9 @@
     },
     "slug": {
       "type": "string"
+    },
+    "publish": {
+      "type": "boolean"
     }
   }
 }

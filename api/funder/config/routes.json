@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/contributors",
-      "handler": "contributor.find",
+      "path": "/funders",
+      "handler": "funder.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/contributors/count",
-      "handler": "contributor.count",
+      "path": "/funders/count",
+      "handler": "funder.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/contributors/:id",
-      "handler": "contributor.findOne",
+      "path": "/funders/:id",
+      "handler": "funder.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/contributors",
-      "handler": "contributor.create",
+      "path": "/funders",
+      "handler": "funder.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/contributors/:id",
-      "handler": "contributor.update",
+      "path": "/funders/:id",
+      "handler": "funder.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/contributors/:id",
-      "handler": "contributor.delete",
+      "path": "/funders/:id",
+      "handler": "funder.delete",
       "config": {
         "policies": []
       }

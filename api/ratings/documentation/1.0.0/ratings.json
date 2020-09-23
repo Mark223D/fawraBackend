@@ -531,6 +531,9 @@
           "slug": {
             "type": "string"
           },
+          "publish": {
+            "type": "boolean"
+          },
           "created_by": {
             "required": [
               "id",
@@ -631,6 +634,9 @@
           },
           "slug": {
             "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"

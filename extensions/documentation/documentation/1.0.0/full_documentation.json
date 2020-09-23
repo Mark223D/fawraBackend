@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "09/11/2020 2:03:57 PM"
+    "x-generation-date": "09/23/2020 8:08:57 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1578,7 +1578,7 @@
         ]
       }
     },
-    "/contributors": {
+    "/funders": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1590,7 +1590,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contributor"
+                    "$ref": "#/components/schemas/Funder"
                   }
                 }
               }
@@ -1629,7 +1629,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": [
           {
@@ -1779,7 +1779,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributor"
+                  "$ref": "#/components/schemas/Funder"
                 }
               }
             }
@@ -1817,7 +1817,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "requestBody": {
           "description": "",
@@ -1825,14 +1825,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributor"
+                "$ref": "#/components/schemas/NewFunder"
               }
             }
           }
         }
       }
     },
-    "/contributors/count": {
+    "/funders/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1884,12 +1884,12 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": []
       }
     },
-    "/contributors/{id}": {
+    "/funders/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1899,7 +1899,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributor"
+                  "$ref": "#/components/schemas/Funder"
                 }
               }
             }
@@ -1937,7 +1937,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": [
           {
@@ -1961,7 +1961,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributor"
+                  "$ref": "#/components/schemas/Funder"
                 }
               }
             }
@@ -1999,7 +1999,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "requestBody": {
           "description": "",
@@ -2007,7 +2007,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributor"
+                "$ref": "#/components/schemas/NewFunder"
               }
             }
           }
@@ -2073,7 +2073,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": [
           {
@@ -6487,6 +6487,9 @@
               "slug": {
                 "type": "string"
               },
+              "publish": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6512,6 +6515,9 @@
               "slug": {
                 "type": "string"
               },
+              "publish": {
+                "type": "boolean"
+              },
               "created_by": {
                 "type": "string"
               },
@@ -6531,11 +6537,8 @@
               "title": {
                 "type": "string"
               },
-              "translation": {
-                "type": "string"
-              },
-              "slug": {
-                "type": "string"
+              "publish": {
+                "type": "boolean"
               },
               "created_by": {
                 "type": "string"
@@ -6546,6 +6549,18 @@
             }
           },
           "content": {
+            "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
+          },
+          "arabic_title": {
+            "type": "string"
+          },
+          "arabic_content": {
+            "type": "string"
+          },
+          "arabic_author": {
             "type": "string"
           },
           "created_by": {
@@ -6664,6 +6679,18 @@
           "content": {
             "type": "string"
           },
+          "publish": {
+            "type": "boolean"
+          },
+          "arabic_title": {
+            "type": "string"
+          },
+          "arabic_content": {
+            "type": "string"
+          },
+          "arabic_author": {
+            "type": "string"
+          },
           "created_by": {
             "type": "string"
           },
@@ -6688,6 +6715,9 @@
           },
           "slug": {
             "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -6790,6 +6820,9 @@
           "slug": {
             "type": "string"
           },
+          "publish": {
+            "type": "boolean"
+          },
           "created_by": {
             "type": "string"
           },
@@ -6798,7 +6831,7 @@
           }
         }
       },
-      "Contributor": {
+      "Funder": {
         "required": [
           "id"
         ],
@@ -6806,17 +6839,17 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "Company": {
+          "arabic": {
             "type": "string"
           },
-          "website": {
+          "link": {
             "type": "string"
           },
-          "email": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -6908,19 +6941,19 @@
           }
         }
       },
-      "NewContributor": {
+      "NewFunder": {
         "properties": {
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "Company": {
+          "arabic": {
             "type": "string"
           },
-          "website": {
+          "link": {
             "type": "string"
           },
-          "email": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"
@@ -6946,6 +6979,9 @@
           },
           "translation": {
             "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -7048,6 +7084,9 @@
           "translation": {
             "type": "string"
           },
+          "publish": {
+            "type": "boolean"
+          },
           "created_by": {
             "type": "string"
           },
@@ -7072,6 +7111,9 @@
           },
           "slug": {
             "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -7174,6 +7216,9 @@
           "slug": {
             "type": "string"
           },
+          "publish": {
+            "type": "boolean"
+          },
           "created_by": {
             "type": "string"
           },
@@ -7195,6 +7240,9 @@
           },
           "url": {
             "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -7294,6 +7342,9 @@
           "url": {
             "type": "string"
           },
+          "publish": {
+            "type": "boolean"
+          },
           "created_by": {
             "type": "string"
           },
@@ -7313,11 +7364,8 @@
           "title": {
             "type": "string"
           },
-          "translation": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -7414,11 +7462,8 @@
           "title": {
             "type": "string"
           },
-          "translation": {
-            "type": "string"
-          },
-          "slug": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"
@@ -7893,7 +7938,7 @@
       "name": "Category"
     },
     {
-      "name": "Contributor"
+      "name": "Funder"
     },
     {
       "name": "Ratings"

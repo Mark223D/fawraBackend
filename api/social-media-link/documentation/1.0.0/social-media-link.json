@@ -541,6 +541,9 @@
           "url": {
             "type": "string"
           },
+          "publish": {
+            "type": "boolean"
+          },
           "created_by": {
             "required": [
               "id",
@@ -638,6 +641,9 @@
           },
           "url": {
             "type": "string"
+          },
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"

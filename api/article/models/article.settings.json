@@ -43,6 +43,18 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "publish": {
+      "type": "boolean"
+    },
+    "arabic_title": {
+      "type": "string"
+    },
+    "arabic_content": {
+      "type": "richtext"
+    },
+    "arabic_author": {
+      "type": "string"
     }
   }
 }

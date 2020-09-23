@@ -17,6 +17,9 @@
     },
     "translation": {
       "type": "string"
+    },
+    "publish": {
+      "type": "boolean"
     }
   }
 }

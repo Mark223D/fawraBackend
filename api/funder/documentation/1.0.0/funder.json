@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/contributors": {
+    "/funders": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Contributor"
+                    "$ref": "#/components/schemas/Funder"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributor"
+                  "$ref": "#/components/schemas/Funder"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributor"
+                "$ref": "#/components/schemas/NewFunder"
               }
             }
           }
         }
       }
     },
-    "/contributors/count": {
+    "/funders/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": []
       }
     },
-    "/contributors/{id}": {
+    "/funders/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributor"
+                  "$ref": "#/components/schemas/Funder"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Contributor"
+                  "$ref": "#/components/schemas/Funder"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewContributor"
+                "$ref": "#/components/schemas/NewFunder"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Contributor"
+          "Funder"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Contributor": {
+      "Funder": {
         "required": [
           "id"
         ],
@@ -522,17 +522,17 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "Company": {
+          "arabic": {
             "type": "string"
           },
-          "website": {
+          "link": {
             "type": "string"
           },
-          "email": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "required": [
@@ -624,19 +624,19 @@
           }
         }
       },
-      "NewContributor": {
+      "NewFunder": {
         "properties": {
-          "Name": {
+          "name": {
             "type": "string"
           },
-          "Company": {
+          "arabic": {
             "type": "string"
           },
-          "website": {
+          "link": {
             "type": "string"
           },
-          "email": {
-            "type": "string"
+          "publish": {
+            "type": "boolean"
           },
           "created_by": {
             "type": "string"
@@ -650,7 +650,7 @@
   },
   "tags": [
     {
-      "name": "Contributor"
+      "name": "Funder"
     }
   ]
 }
